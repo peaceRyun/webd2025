@@ -43,9 +43,27 @@ img {
     position: relative;
 }
 
-#main .slider {
+/* slider */
+#main #slider {
     height: 300px;
     background-color: #adadad;
+    overflow: hidden;
+}
+
+#main #slider .sliderWrap {
+}
+
+#main #slider .sliderWrap .slider {
+    position: relative;
+    z-index: 2;
+}
+#main #slider .sliderWrap .slider > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 #main .contents {
@@ -144,8 +162,6 @@ img {
     overflow: hidden;
     transition: all 0.3s;
 }
-/* .nav > ul > li > ul > li {
-} */
 .nav > ul > li > ul > li > a {
     display: block;
     padding: 10px;
