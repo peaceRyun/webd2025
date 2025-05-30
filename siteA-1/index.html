@@ -8,6 +8,7 @@
         <script defer src="./script/script.js"></script>
     </head>
     <body>
+        <div class="tab_pop">sssssssss<button class="btn_close">닫기</button></div>
         <div id="wrap">
             <header id="header">
                 <h1 class="logo">
@@ -55,33 +56,48 @@
                 </nav>
             </header>
             <main id="main">
-                <article id="slider">
+                <div id="slider">
                     <div class="sliderWrap">
                         <div class="slider s1"><img src="./images/slide1.png" alt="slide1" /><span>이미지1</span></div>
                         <div class="slider s2"><img src="./images/slide2.png" alt="slide2" /><span>이미지2</span></div>
                         <div class="slider s3"><img src="./images/slide3.jpg" alt="slide3" /><span>이미지3</span></div>
                     </div>
-                </article>
-                <article class="contents">
-                    <section class="notice-gallery">
-                        <h2 class="noticeheader">공지사항</h2>
-                        <ul class="notice">
-                            <li>공지사항1</li>
-                            <li>공지사항2</li>
-                            <li>공지사항3</li>
-                            <li>공지사항4</li>
-                        </ul>
+                </div>
+                <div class="contents">
+                    <section>
+                        <div class="tab_menu">
+                            <div class="tabs"><a href="#">공지사항</a><a href="#">갤러리</a></div>
+                            <div class="tab_contents">
+                                <ul class="notice">
+                                    <li class="btn_open"><a href="#">공지사항 1</a> <span>2025.11.21</span></li>
+                                    <li><a href="#">공지사항 2</a> <span>2025.11.21</span></li>
+                                    <li><a href="#">공지사항 3</a> <span>2025.11.21</span></li>
+                                    <li><a href="#">공지사항 4</a> <span>2025.11.21</span></li>
+                                </ul>
+                                <ul class="gallery">
+                                    <li>
+                                        <a href="#"><img src="./images/gallery01.jpg" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./images/gallery01.jpg" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./images/gallery01.jpg" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </section>
-                    <div class="banner">
-                        <img src="./images/banner.png" alt="banner" />
-                    </div>
-                    <div class="go">
+                    <section class="banner">
+                        <a href="#"><img src="./images/banner.png" alt="banner" /></a>
+                    </section>
+                    <section class="go">
                         <div>
                             <img src="./images/link.jpg" alt="link" />
                             <a href="#" class="golink">바로가기</a>
                         </div>
-                    </div>
-                </article>
+                    </section>
+                </div>
             </main>
             <footer id="footer">
                 <div class="logof"><img src="./images/logo-foot.png" alt="logo푸터" /></div>
