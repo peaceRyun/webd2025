@@ -99,6 +99,9 @@ button {
     z-index: 100;
     overflow: hidden;
 }
+.slider_wrap {
+    display: flex;
+}
 /* contents */
 #contents {
     width: 1200px;

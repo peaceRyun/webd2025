@@ -22,11 +22,11 @@ window.onload = () => {
     setInterval(() => {
         currentIndex++;
         sliderWrap.style.transition = 'all 0.6s';
-        sliderWrap.style.marginTop = -currentIndex * 300 + 'px';
+        sliderWrap.style.marginLeft = -currentIndex * 100 + '%';
         if (currentIndex == slider.length) {
             setTimeout(() => {
                 sliderWrap.style.transition = '0s';
-                sliderWrap.style.marginTop = '0';
+                sliderWrap.style.marginLeft = '0';
                 currentIndex = 0;
             }, 700);
         }
