@@ -18,6 +18,9 @@ li {
 img {
     vertical-align: top;
 }
+button {
+    all: unset;
+}
 
 .sr-only {
     position: absolute;
@@ -48,6 +51,7 @@ img {
     width: 80%;
     height: 100px;
     position: relative;
+    z-index: 9999;
 }
 #header .gnb > ul {
     position: absolute;
@@ -62,11 +66,10 @@ img {
 #header .gnb > ul > li > a {
     display: block;
     padding: 10px 70px;
-    background-color: #99ccff;
     text-align: center;
 }
 #header .gnb > ul > li > a:hover {
-    background-color: #3399ff;
+    background-color: #99ccff;
 }
 #header .gnb > ul > li > ul {
     /* display: none; */
@@ -96,8 +99,6 @@ img {
     z-index: 100;
     overflow: hidden;
 }
-#sliders .slider_wrap {
-}
 /* contents */
 #contents {
     width: 1200px;
@@ -108,17 +109,97 @@ img {
 /* tab */
 .tab_wrap {
     flex: 1;
-    background-color: #b8b8b8;
+}
+.tab_wrap .tab_area {
+    width: 94%;
+    height: 100%;
+    margin: 0 auto;
+}
+.tab_wrap .tab_area .tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+.tab_wrap .tab_area .tabs > button {
+    padding: 10px 30px;
+    cursor: pointer;
+}
+.tab_wrap .tab_area .tabs > button:hover {
+    background-color: #99ccff;
+}
+.tab_wrap .tab_area .tabs > button.on {
+    background-color: #3399ff;
+}
+.tab_wrap .tab_area .notice_cont {
+    display: none;
+}
+.tab_wrap .tab_area .notice_cont.on {
+    display: block;
+}
+.tab_wrap .tab_area .notice_cont.on > li {
+    padding-bottom: 10px;
+}
+.tab_wrap .tab_area .notice_cont.on > li > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tab_wrap .tab_area .notice_cont.on > li > a:hover {
+    color: #0140be;
+    font-weight: bold;
+}
+.tab_wrap .tab_area .gallery_cont {
+    display: none;
+}
+.tab_wrap .tab_area .gallery_cont.on {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.tab_wrap .tab_area .gallery_cont.on > li > a:hover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 30%;
 }
 /* banner */
 .banner_wrap {
     flex: 1;
-    background-color: #7c7c7c;
+    position: relative;
+}
+.banner_wrap > a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #3399ff;
+}
+.banner_wrap > a:hover {
+    background-color: #003399;
+    color: white;
 }
 /* direct */
 .direct_wrap {
     flex: 1;
-    background-color: #969696;
+    position: relative;
+}
+
+.direct_wrap > a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 100%;
+    background-color: #3399ff;
+}
+.direct_wrap > a:hover {
+    background-color: #003399;
+    color: white;
 }
 
 /* footer */
@@ -129,11 +210,13 @@ img {
 #footer .footer_logo {
     width: 20%;
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #footer .footer_cont {
     width: 80%;
     height: 100px;
-    background-color: #383737;
 }
 #footer .footer_cont .down-menu {
     height: 50px;
@@ -141,12 +224,60 @@ img {
     justify-content: center;
     align-items: center;
 }
+#footer .footer_cont .down-menu > ul > li > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 50px;
+    border-right: 1px solid black;
+}
+#footer .footer_cont .down-menu > ul > li > a:hover {
+    color: #0066ff;
+}
+#footer .footer_cont .down-menu > ul > li:last-child > a {
+    border-right: none;
+}
 #footer .footer_cont .copyright {
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 12px;
 }
 #footer .footer_cont .down-menu > ul {
     display: flex;
+}
+
+/* pop */
+.pop_wrap {
+    display: none;
+}
+.pop_wrap.on {
+    display: block;
+    position: fixed;
+    z-index: 99999;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 5px solid #003399;
+    padding: 20px;
+}
+.pop_wrap > h2 {
+    margin: 50px 0px;
+}
+.pop_wrap > p {
+    margin-bottom: 50px;
+}
+.pop_wrap > .pop_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.pop_wrap > .pop_close:hover {
+    background-color: #99ccff;
 }

@@ -9,6 +9,14 @@
     </head>
     <body>
         <div id="wrap">
+            <div class="pop_wrap">
+                <h2>대한은행에 오신 것을 환영합니다!</h2>
+                <p>
+                    안녕하세요! 대한은행을 방문해 주셔서 감사합니다. 고객님께 최상의 금융 서비스를 제공하기 위해
+                    노력하고 있습니다. 새로운 금융 상품과 이벤트에 대한 정보는 아래 링크를 통해 확인해 주세요!
+                </p>
+                <button class="pop_close">닫기</button>
+            </div>
             <header id="header">
                 <div class="logo">
                     <h1 class="sr-only">대한은행</h1>
@@ -63,19 +71,69 @@
                 </div>
                 <div id="contents">
                     <div class="sr-only">탭배너바로가기</div>
-                    <section class="tab_wrap"></section>
-                    <section class="banner_wrap"></section>
-                    <section class="direct_wrap"></section>
+                    <section class="tab_wrap">
+                        <div class="tab_area">
+                            <div class="tabs">
+                                <button class="notice on">공지사항</button>
+                                <button class="gallery">갤러리</button>
+                            </div>
+                            <ul class="notice_cont on">
+                                <li class="pop_open">
+                                    <a href="#">
+                                        <span>2024년 신규 금융 상품 출시 안내</span>
+                                        <span>2024년 1월 10일</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>온라인 뱅킹 서비스 개선 소식</span>
+                                        <span>2024년 2월 15일</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>고객 만족을 위한 이벤트 개최 안내</span>
+                                        <span>2024년 3월 5일</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>사회적 책임 활동 보고서 발행</span>
+                                        <span>2024년 4월 20일</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="gallery_cont">
+                                <li>
+                                    <a href="#"><img src="./images/icon1.jpg" alt="갤러리1" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="./images/icon2.jpg" alt="갤러리2" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="./images/icon3.jpg" alt="갤러리3" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="banner_wrap">
+                        <img src="./images/banner.png" alt="banner" />
+                        <a href="#">대한은행 앱 다운로드</a>
+                    </section>
+                    <section class="direct_wrap">
+                        <img src="./images/direct.png" alt="direct" />
+                        <a href="#">바로가기</a>
+                    </section>
                 </div>
             </main>
             <footer id="footer">
-                <div class="footer_logo"></div>
+                <a href="#" class="footer_logo"><img src="./images/footerlogo.png" alt="footerlogo" /></a>
                 <div class="footer_cont">
                     <div class="down-menu">
                         <ul>
-                            <li><span>은행 소개</span></li>
-                            <li><span>금융 상품 안내 </span></li>
-                            <li><span>고객 지원 센터</span></li>
+                            <li><a href="#">은행 소개</a></li>
+                            <li><a href="#">금융 상품 안내 </a></li>
+                            <li><a href="#">고객 지원 센터</a></li>
                         </ul>
                     </div>
                     <div class="copyright">COPYRIGHTⓒ by BARUNWEBDESIGN. ALL RIGHTS RESERVED.</div>
