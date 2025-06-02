@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html {
+    background-color: #fff;
     color: #333333;
 }
 li {
@@ -148,11 +151,11 @@ button {
 }
 .sliders .slider_wrap {
     width: 100%;
-    height: 100%;
+    height: 300%;
 }
 .sliders .slider_wrap > li {
     width: 100%;
-    height: 100%;
+    height: 33.3333%;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -182,13 +185,6 @@ button {
 }
 .sliders .slider_wrap .slider.s3 {
     background-image: url('../images/slider3.png');
-}
-.sliders .link {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 150px;
-    height: 300px;
 }
 .sliders .link {
     position: absolute;

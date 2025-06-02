@@ -19,15 +19,15 @@ window.onload = () => {
     setInterval(() => {
         currentIndex++;
         sliderWrap.style.transition = 'all 0.6s';
-        sliderWrap.style.marginTop = `${-400 * currentIndex}px`;
+        sliderWrap.style.transform = `translateY(${-33.33 * currentIndex}%)`;
         if (currentIndex === slider.length) {
             setTimeout(() => {
                 currentIndex = 0;
                 sliderWrap.style.transition = 'all 0s';
-                sliderWrap.style.marginTop = '0';
+                sliderWrap.style.transform = 'translateY(0%)';
             }, 700);
         }
-    }, 3000);
+    }, 2300);
 
     // tab
     const tabs = document.querySelectorAll('.tabs > button');
