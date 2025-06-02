@@ -1,4 +1,8 @@
 @charset "UTF-8";
+:root {
+    --primary: #ffcc66;
+}
+
 /* reset */
 * {
     margin: 0;
@@ -117,7 +121,7 @@ button {
 }
 #gnb > ul > li > ul > li > a:hover {
     font-weight: 700;
-    background-color: #ffcc66;
+    background-color: var(--primary);
 }
 
 #header .spot-menu {
