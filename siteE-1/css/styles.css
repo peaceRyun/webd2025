@@ -137,7 +137,7 @@ button {
     display: block;
     padding: 5px 20px;
     font-size: 17px;
-    font-weight: medium;
+    font-weight: 500;
     background-color: var(--primary-color-light);
 }
 #gnb > ul > li > ul > li > a:hover {
