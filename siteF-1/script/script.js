@@ -27,4 +27,15 @@ window.onload = () => {
             tabConts[index].classList.add('on');
         });
     });
+    // pop
+    const popOpen = document.querySelector('.pop-open');
+    const popClose = document.querySelector('.pop-close');
+    const popWrap = document.querySelector('.pop-wrap');
+    popOpen.addEventListener('click', (e) => {
+        e.preventDefault();
+        popWrap.classList.add('on');
+    });
+    popClose.addEventListener('click', () => {
+        popWrap.classList.remove('on');
+    });
 };
