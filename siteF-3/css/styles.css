@@ -121,6 +121,11 @@ img {
     overflow: hidden;
 }
 .sliders .gnb-sub-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 998;
     display: block;
     height: 0;
     background: var(--primary-color-light);
