@@ -1,0 +1,328 @@
+@charset 'utf-8';
+
+:root {
+    --primary-color: #0a9b97;
+    --primary-color-light: #69d4d1;
+    --secondary-color: #f04467;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #666;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+/* wrap */
+#wrap {
+    width: 100%;
+    position: relative;
+}
+/* header */
+#header {
+    width: 1340px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+}
+.logo {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gnb {
+    width: 85%;
+    height: 100%;
+    position: relative;
+    z-index: 999;
+}
+#gnb > ul {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    display: flex;
+}
+#gnb > ul > li {
+    position: relative;
+}
+#gnb > ul > li > a {
+    display: block;
+    padding: 10px 50px;
+    font-size: 20px;
+    font-weight: 500;
+}
+#gnb > ul > li > a:hover {
+    background-color: var(--primary-color-light);
+    font-weight: 700;
+}
+#gnb > ul > li > ul {
+    position: absolute;
+    background-color: var(--primary-color-light);
+    width: 100%;
+    height: 0px;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+#gnb > ul > li > ul > li > a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+}
+#gnb > ul > li > ul > li > a:hover {
+    background-color: var(--primary-color);
+    font-weight: 500;
+}
+/* main */
+/* sliders */
+.sliders {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+.sliders .gnb-sub-bg {
+    display: block;
+    height: 0;
+    background: var(--primary-color-light);
+    transition: all 0.3s;
+}
+
+.sliders .gnb-sub-bg.on {
+    height: 200px;
+}
+
+.sliders .direct-wrap {
+    width: 1340px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.sliders .direct-wrap > li {
+    flex: 1;
+}
+.sliders .direct-wrap > li > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+.sliders .direct-wrap > li > a:hover {
+    background-color: var(--primary-color-light);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.slider-wrap {
+    display: flex;
+    align-items: center;
+    width: 400%;
+    height: 100%;
+}
+.slider {
+    width: 25%;
+    height: 100%;
+}
+.slider > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* banner */
+.banner {
+    width: 1340px;
+    margin: 0 auto;
+}
+
+/* tab */
+.tab-wrap {
+    width: 1340px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px 30px 0px;
+}
+.tab-wrap .tab-menu > button {
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+.tab-wrap .tab-menu > button:hover {
+    background-color: var(--primary-color-light);
+    color: #fff;
+}
+.tab-wrap .tab-menu > button.on {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+}
+.tab-wrap .tab-cont-wrap {
+    width: 700px;
+}
+.tab-wrap .tab-cont-wrap .notice-cont {
+    display: none;
+}
+.tab-wrap .tab-cont-wrap .notice-cont.on {
+    display: block;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.tab-wrap .tab-cont-wrap .notice-cont > li > a {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tab-wrap .tab-cont-wrap .notice-cont > li > a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.tab-wrap .tab-cont-wrap .notice-cont > li > a > span:first-child {
+    font-size: 20px;
+}
+.tab-wrap .tab-cont-wrap .gal-cont {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+.tab-wrap .tab-cont-wrap .gal-cont.on {
+    display: flex;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.tab-wrap .tab-cont-wrap .gal-cont > li > a {
+    transition: all 0.3s;
+}
+.tab-wrap .tab-cont-wrap .gal-cont > li > a:hover {
+    opacity: 0.4;
+}
+
+/* pop */
+.pop-wrap {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 4px solid var(--secondary-color);
+    border-radius: 10px;
+    padding: 30px;
+    display: none;
+}
+.pop-wrap.on {
+    display: block;
+}
+.pop-wrap > h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.pop-wrap > p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.pop-wrap > button {
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+.pop-wrap > button:hover {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+/* footer */
+#footer {
+    margin: 0 auto;
+    width: 1340px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+#footer .footer-logo-wrap {
+    display: block;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer .bmenu-copy-wrap {
+    width: 85%;
+    height: 100%;
+}
+#footer .bmenu-copy-wrap .bmenu-wrap {
+    display: flex;
+    align-items: center;
+    height: 50%;
+}
+#footer .bmenu-copy-wrap .bmenu-wrap > li {
+}
+#footer .bmenu-copy-wrap .bmenu-wrap > li > a {
+    padding: 5px 10px;
+    border-right: 1px solid #333;
+}
+#footer .bmenu-copy-wrap .bmenu-wrap > li:last-child > a {
+    border: none;
+}
+#footer .bmenu-copy-wrap .bmenu-wrap > li > a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+#footer .bmenu-copy-wrap .copy-wrap {
+    height: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+}
