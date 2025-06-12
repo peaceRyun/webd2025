@@ -32,6 +32,10 @@ button {
     cursor: pointer;
 }
 
+button:focus {
+    outline: 2px solid black;
+}
+
 img {
     vertical-align: top;
     max-width: 100%;
