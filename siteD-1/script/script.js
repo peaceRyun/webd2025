@@ -15,11 +15,12 @@ window.onload = () => {
     const slider = document.querySelectorAll('.slider_wrap > .slider');
     const firstClone = sliderWrap.firstElementChild.cloneNode(true);
     sliderWrap.appendChild(firstClone);
+    const transPer = 100 / (slider.length + 1);
 
     setInterval(() => {
         currentIndex++;
         sliderWrap.style.transition = 'all 0.6s';
-        sliderWrap.style.transform = `translateY(${-33.33 * currentIndex}%)`;
+        sliderWrap.style.transform = `translateY(${-transPer * currentIndex}%)`;
         if (currentIndex === slider.length) {
             setTimeout(() => {
                 currentIndex = 0;

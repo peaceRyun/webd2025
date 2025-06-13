@@ -9,7 +9,6 @@ window.onload = () => {
     setInterval(() => {
         currentIndex++;
         sliderWrap.style.transition = 'all 0.6s';
-        console.log(transPercent);
         sliderWrap.style.transform = `translateX(${-transPercent * currentIndex}%)`;
         setTimeout(() => {
             if (currentIndex == sliders.length) {
